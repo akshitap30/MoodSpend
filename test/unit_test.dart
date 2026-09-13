@@ -1,4 +1,4 @@
-﻿// MoodSpend - Unit Tests
+// MoodSpend - Unit Tests
 // Tests for core business logic that does not require Flutter widgets or Hive.
 
 import 'package:flutter_test/flutter_test.dart';
@@ -279,10 +279,26 @@ void main() {
     test('computes per-tag average spend correctly', () {
       final logs = [
         _makeLog(
-            id: 'l1', mood: 2, energy: 4, amount: 200, tags: ['stressed']),
+          id: 'l1',
+          mood: 2,
+          energy: 4,
+          amount: 200,
+          tags: ['stressed'],
+        ),
         _makeLog(
-            id: 'l2', mood: 3, energy: 5, amount: 400, tags: ['stressed']),
-        _makeLog(id: 'l3', mood: 4, energy: 7, amount: 100, tags: ['happy']),
+          id: 'l2',
+          mood: 3,
+          energy: 5,
+          amount: 400,
+          tags: ['stressed'],
+        ),
+        _makeLog(
+          id: 'l3',
+          mood: 4,
+          energy: 7,
+          amount: 100,
+          tags: ['happy'],
+        ),
       ];
 
       final averages = PatternService.tagSpendAverages(logs);
@@ -307,11 +323,11 @@ void main() {
       final logs = [
         _makeLog(id: 'l1', mood: 2, energy: 4, amount: 100, hour: 10, day: 2),
         _makeLog(id: 'l2', mood: 3, energy: 5, amount: 200, hour: 10, day: 2),
-        _makeLog(id: 'l3', mood: 4, energy: 7, hour: 10, day: 2), // no amount
+        _makeLog(id: 'l3', mood: 4, energy: 7, hour: 10, day: 2),
       ];
 
       final matrix = PatternService.buildHeatmap(logs);
-      expect(matrix[2][10], 2); // 2 spending logs at day=2, hour=10
+      expect(matrix[2][10], 2);
     });
   });
 }

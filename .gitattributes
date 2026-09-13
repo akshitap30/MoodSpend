@@ -1,0 +1,31 @@
+# Enforce Unix line endings for all text/source files
+* text=auto eol=lf
+
+# Dart source files — always LF
+*.dart text eol=lf
+
+# YAML — always LF
+*.yaml text eol=lf
+*.yml text eol=lf
+
+# Markdown — always LF
+*.md text eol=lf
+
+# SQL — always LF
+*.sql text eol=lf
+
+# Shell scripts — always LF
+*.sh text eol=lf
+
+# Windows batch files can keep CRLF
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# Binary files — no line-ending conversion
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.jar binary
+*.zip binary

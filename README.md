@@ -1,4 +1,4 @@
-﻿<div align="center">
+<div align="center">
 
 # 💸 MoodSpend
 
@@ -308,6 +308,6 @@ This project is licensed under the **MIT License** — see the [LICENSE](LICENSE
 
 <div align="center">
 
-Built with ❤️ by [Akshita Pandey](https://github.com/akshitap30)
+Built with ❤️ by [Akshita Pardeshi](https://github.com/akshitap30)
 
 </div>
